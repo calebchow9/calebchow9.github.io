@@ -1,5 +1,5 @@
 body {
-  font-family: "Muli", sans-serif;
+  font-family: 'Quicksand', sans-serif;
   background-color: white;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -35,4 +35,56 @@ body {
 
 .main {
   margin-top: 30px;
+}
+
+.textoverimage{
+  font-family: 'Quicksand', sans-serif;
+  margin: 4px;
+  width: 500px;
+  height: 500px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+.textoverimage img{
+  width:100%;
+  height:100%;
+  border-radius: 8px;
+  transition: .3s;
+}
+.textoverimage:hover img{
+  filter:blur(2px) brightness(60%)
+}
+.textoverimage :not(img){
+  font-family: 'Quicksand', san-serif;
+  text-align: left;
+  position: absolute;
+  top:50%;
+  z-index: 1;
+  color: white;
+  opacity: 0;
+  transition: 0.3s;
+  margin: 10px;
+}
+.textoverimage:hover :not(img){
+  opacity: 1;
+}
+.textoverimage h3{
+  font-family: 'Quicksand', san-serif;
+  font-style: italic;
+  top:30%;
+  font-size: 16px;
+}
+.textoverimage h2{
+  font-family: 'Quicksand', san-serif;
+  font-weight: bolder;
+  top:20%;
+  font-size: 40px;
+}
+.photofooter h2{
+  font-family: 'Quicksand', san-serif;
+  text-align: center;
+  font-size: 30px;
+  font-weight:bold;
+  color: black;
 }
