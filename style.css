@@ -13,9 +13,11 @@ body {
 }
 .navbar {
   overflow: hidden;
-  position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
   top: 0;
   width: 100%;
+  z-index: 1;
 }
 .navbar a {
   float: left;
@@ -30,12 +32,18 @@ body {
   color: black;
 }
 
+.album{
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  justify-content: center;
+}
+
 .textoverimage{
   font-family: 'Quicksand', sans-serif;
   margin: 4px;
   width: 500px;
   height: 500px;
-  display: inline-block;
   position: relative;
   cursor: pointer;
 }
@@ -65,13 +73,13 @@ body {
 .textoverimage h3{
   font-family: 'Quicksand', san-serif;
   font-style: italic;
-  top:30%;
+  top:80%;
   font-size: 16px;
 }
 .textoverimage h2{
   font-family: 'Quicksand', san-serif;
   font-weight: bolder;
-  top:20%;
+  top:70%;
   font-size: 40px;
 }
 .photofooter h2{
