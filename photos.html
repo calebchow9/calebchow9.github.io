@@ -1,37 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Caleb Chow</title>
+  <title>Photos</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="style.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
   integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-  <style> .navbar a{color: black}
-  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="./scripts.js"></script>
+  <style>.nav div.main_list ul li a {color: black} .affix {background-color: #ddd} .nav div.logo a {color: black};</style>
 </head>
-<body>
-<div class= "grid" style="text-align: center">
-  <div class="navbar">
-    <a href="index.html">home</a>
-    <a href="photos.html">photos</a>
-    <a href="vlog.html">blog</a>
-  </div>
 
-  <div class= "namephoto" style="margin-top: 40px; text-align: center">
-    <img src="images/avatar2.jpeg" alt="Avatar" style="width:125px;border-radius: 50%"> <br/>
-  <h4 style="font-size:18px; font-family: 'Quicksand', san-serif">snapshots of my life</h4>
-  <h5 style="font-size: 14px; font-family: 'Quicksand', san-serif">scroll for pictures, tap/hover for info</h5>
-    <a href="https://www.instagram.com/calebchow9/" style="text-decoration: none">
-      <i class="fab fa-instagram fa-3x" style="color:black; padding-right: 20px"></i>
-    </a>
-    <a href="https://www.facebook.com/caleb.chow.7" style="text-decoration: none">
-      <i class="fab fa-facebook fa-3x" style="color:black; padding-right: 20px"></i>
-    </a>
-    <a href="https://open.spotify.com/user/sypfii?si=hROjPA_uQWCvtrSqVMFsLA" style="text-decoration: none">
-      <i class="fab fa-spotify fa-3x" style="color:black"></i>
-    </a>
+<body>
+
+  <nav class="nav">
+    <div class="container">
+        <div class="logo">
+            <a href="#">caleb chow</a>
+        </div>
+        <div id="mainListDiv" class="main_list">
+            <ul class="navlinks">
+                <li><a href="index.html">home</a></li>
+                <li><a href="projects.html">projects</a></li>
+                <li><a href="photos.html">photos</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <span class="navTrigger">
+            <i></i>
+            <i></i>
+            <i></i>
+        </span>
+    </div>
+    <script>
+        $('.navTrigger').click(function () {
+            $(this).toggleClass('active');
+            console.log("Clicked menu");
+            $("#mainListDiv").toggleClass("show_list");
+            $("#mainListDiv").fadeIn();
+        });
+    </script>
+  </nav>
+
+<section class="photos">
+
+<div class= "grid" style="text-align: center; padding-top: 135px;">
+
+  <div class= "namephoto" style="text-align: center">
+    <img src="images/avatar2.jpeg" alt="Avatar" style="width:125px;border-radius: 50%">
+    <br></br>
+
+  <h4 style="font-size:30px; font-family: 'Quicksand', san-serif; font-weight: bold;">snapshots of my life</h4>
+  <h5 style="font-size: 16px; font-family: 'Quicksand', san-serif">scroll for pictures, tap/hover for info</h5>
   </div>
 </br>
 
@@ -122,9 +145,11 @@
 
 </br>
 <div class="photofooter">
-  <h2>to be continued...</h2>
+  <h2><i>to be continued...</i></h2>
 </div>
 </div>
 
 </body>
+
+</section>
 </html>
