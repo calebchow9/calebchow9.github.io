@@ -98,7 +98,7 @@ body {
     transform: translateX(-50%) translateY(-50%);
   }
 
-span.name { color:#ddd }
+span.name { color:#f5bd1f}
 
 .contact {
     text-align: center;
