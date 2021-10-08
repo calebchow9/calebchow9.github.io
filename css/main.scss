@@ -1,0 +1,351 @@
+/* Your SCSS here. */
+:root {
+    --dark: #252850;
+    --light: #9085c4;
+    --white: #DEE4E7;
+    --black: #444444;
+    --secondary: #FFC17A;
+}
+
+body {
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#nav {
+    background-color: var(--dark);
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    padding: 20px;
+    z-index: 3;
+    position: fixed;
+}
+
+#nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding-right: 10rem;
+    float: right;
+}
+
+#nav li {
+    width: auto;
+    padding: 0;
+}
+
+#nav ul li.active {
+    background-color: var(--secondary);
+}
+
+#nav a {
+    color: var(--light);
+    text-decoration: none;
+    font-family: 'Quicksand';
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+#nav a:hover {
+    color: var(--white);
+}
+
+#home {
+    min-width: fit-content;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../assets/rainier.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+#nameheader {
+    z-index: 2;
+    text-align: center;
+    font-family: "Quicksand";
+    color: var(--white);
+    position: absolute;
+    line-height: 80px;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+#nameheader h1 {
+    font-size:80px; 
+    font-weight: bolder; 
+    margin: 0;
+}
+
+span.name { 
+    color: var(--secondary);
+}
+
+span.hello {
+    color: var(--light);
+}
+
+#nameheader h3 {
+    font-size: 40px; 
+    font-weight: bold;
+    line-height: 40px;
+}
+
+#nameheader img {
+    max-width: 50%;
+    min-width: 300px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.arrow {
+    position: relative;
+    bottom: -50px;
+    left: 50%;
+    margin-left:-40px;
+    width: 80px;
+    height: 80px;
+    background-image: url(../assets/arrow.png);
+    background-size: contain;
+}
+
+#travel {
+    text-align: center;
+    font-family: "Quicksand";
+    width: 100%;
+}
+
+#travel h1 {
+    text-align: left;   
+    font-size: 60px;
+    margin-left: 5rem;
+    color: var(--light);
+}
+
+#travel h3 {
+    color: var(--dark);
+}
+
+.photo_row {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
+    max-width: 1500px;
+    margin: auto;
+}
+
+.column {
+    flex: 33.33%;
+}
+
+.column img {
+    width: 100%;
+    height: 100%;
+}
+
+#mod_img {
+    cursor: pointer;
+}
+#mod_img:hover {
+    opacity: 0.6;
+}
+
+.modal {
+    display: none;
+    position: fixed; 
+    // display on top z-index
+    z-index: 4;
+    padding-top: 50px; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 600px;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    color: var(--white);
+    padding: 10px 0;
+    height: 150px;
+}
+
+.close {
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 40px;
+    color: var(--white);
+    font-size: 40px;
+  }
+
+.carousel {
+    text-align: center;
+    max-width: 1000px;
+    margin: auto;
+    position: relative;
+}
+
+*{box-sizing: border-box;}
+
+.slide {
+    display: none;
+}
+
+.slide img {
+    max-width: 500px;
+}
+
+// reference https://www.w3schools.com/howto/howto_js_slideshow.asp
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: var(--light);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+#prev {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 16px;
+  margin-top: -50px;
+  color: var(--light);
+  font-size: 30px;
+}
+
+#next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 16px;
+    margin-top: -50px;
+    color: var(--light);
+    font-weight: bold;
+    font-size: 30px;
+    right: 0;
+}
+
+.active, .dot:hover {
+    background-color: var(--dark);
+  }
+
+#dotbuttons {
+    text-align: center;
+}
+
+// CSS fade animation for carousel
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+  
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+#connect {
+    width: 100%;
+    text-align: center;
+    font-family: 'Quicksand';
+}
+
+#connect h1 {
+    text-align: left;   
+    font-size: 60px;
+    margin-left: 5rem;
+    color: var(--light);
+}
+
+#connect h3 {
+    color: var(--dark);
+}
+
+#professional i {
+    color: var(--dark);
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+#connect a {
+    text-decoration: none;
+}
+
+#resume_header h2 {
+    text-align: left;
+    font-size: 40px;
+    padding-left: 8rem;
+    color: var(--light);
+}
+
+#social a{
+    text-decoration: none;
+}
+
+#social i {
+    color: var(--light);
+    padding: 10px 20px; 
+}
+@media (min-width: 1200px) {
+    .resume {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "uiuc_photo uiuc_desc" 
+            "c1_photo c1_desc"
+            "cargill_photo cargill_desc"
+            "bp_photo bp_desc";
+        text-align: center;
+    }
+}
+
+.c1_photo img, .cargill_photo img, .uiuc_photo img, .bp_photo img {
+    max-height: 150px;
+}
+
+.c1_desc, .cargill_desc, .uiuc_desc, .bp_desc {
+    line-height: 15px;
+    text-align: left;
+}
+
+#footer {
+    font-family: 'Quicksand';
+    text-align: right;
+}
