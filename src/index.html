@@ -1,13 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MP1</title>
-    </head>
-    <body>
-        <h1>Hello World! Welcome to MP1!</h1>
-        <img src="assets/image.jpg">
-    </body>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.scss">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="js/main.js"></script>
+    <title>Caleb Chow</title>
+</head>
+
+<body>
+    <section id="home">
+        <nav id="nav">
+            <ul>
+                <li class="home active"><a href="#home">home</a></li>
+                <li class="connect"><a href="#connect">connect</a></li>
+                <li class="travel"><a href="#travel">travel</a></li>
+            </ul>
+        </nav>
+        <div id="nameheader">
+            <img src="assets/avatar.jpg" alt="Avatar">
+            <h1><span class="hello">hello!</span> i'm <span class="name">caleb</span>.</h1>
+            <h3>welcome to my website.</h3>
+        </div>
+    </section>
+    <section id="connect">
+        <h1>> connect</h1>
+        <div id="professional">
+            <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/calebchow9/">
+                <i class="fab fa-linkedin-in fa-4x"></i>
+            </a>
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/calebchow9">
+                <i class="fab fa-github fa-4x"></i>
+            </a>
+            <a target="_blank" rel="noopener noreferrer" href="mailto:calebchow9@gmail.com">
+                <i class="fas fa-envelope fa-4x"></i>
+            </a>
+        </div>
+        <h3>connect with me!</h3>
+        <div id="resume_header">
+            <h2>> resume</h2>
+        </div>
+        <article class="resume">
+            <div class="grid-area uiuc_photo">
+                <img src="assets/uiuc.png" alt="UIUC">
+            </div>
+            <div class="grid-area uiuc_desc">
+                <h3>University of Illinois at Urbana-Champaign, Grainger College of Engineering</h3>
+                <h4>Bachelor of Science in Computer Engineering, Minor in Business</h4>
+                <p>August 2018 - May 2022</p>
+                <br>
+            </div>
+            <div class="grid-area c1_photo">
+                <img src="assets/c1.png" alt="Capital One">
+            </div>
+            <div class="grid-area c1_desc">
+                <h3>Software Engineering Intern (McLean, VA)</h3>
+                <p>June 2021 - August 2021</p>
+                <ul>
+                    <li>
+                        <p>Developed analytics tracker built into Android banking app to measure user authentication
+                            method success</p>
+                    </li>
+                    <li>
+                        <p>Designed processor using Kotlin to bundle generated analytics and send to backend database
+                        </p>
+                    </li>
+                    <li>
+                        <p>Integrated behavioral analytics library into the mobile authentication SDK to create models
+                            of credibility per customer</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="grid-area cargill_photo">
+                <img src="assets/cargill.png" alt="Cargill">
+            </div>
+            <div class="grid-area cargill_desc">
+                <h3>Software Engineering Intern (Champaign, IL)</h3>
+                <p>January 2021 - April 2021</p>
+                <ul>
+                    <li>
+                        <p>Developed a mobile app for an internal options trading platform using Angular with Ionic
+                            framework</p>
+                    </li>
+                    <li>
+                        <p>Designed screens for portfolios, positions, and market values through fetching data from API
+                            requests
+                        </p>
+                    </li>
+                    <li>
+                        <p>Implemented two-step Okta authorization in-app to ensure customer portfolio security</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="grid-area bp_photo">
+                <img src="assets/bp.png" alt="BP">
+            </div>
+            <div class="grid-area cargill_desc">
+                <h3>Data Science/AI Intern (Champaign, IL)</h3>
+                <p>September 2020 - December 2020</p>
+                <ul>
+                    <li>
+                        <p>Designed image processing technique using edge detection models to read analog gauges on wind
+                            turbines</p>
+                    </li>
+                    <li>
+                        <p>Implemented computer vision for real time maintenance detection, optimizing costs
+                        </p>
+                    </li>
+                    <li>
+                        <p>Visualized temperature and vibration data using Python to determine remaining useful life of
+                            bearings</p>
+                    </li>
+                </ul>
+            </div>
+        </article>
+    </section>
+    <section id="travel">
+        <h1>> travel</h1>
+        <h3>summer 2021</h3>
+        <div class="photo_row">
+            <div class="column">
+                <img class="modal_images" id="mod_img" src="assets/sunrise.jpg" alt="Sunrise in Sedona">
+            </div>
+            <div class="column">
+                <img class="modal_images" id="mod_img" src="assets/sunset.jpg" alt="Sunset in Sedona">
+            </div>
+            <div class="column">
+                <img class="modal_images" id="mod_img" src="assets/canyon.jpg" alt="Grand Canyon">
+            </div>
+            <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="mod_display">
+                <div id="caption"></div>
+            </div>
+        </div>
+        <p> click on an image to view in modal</p>
+        <br>
+        <br>
+        <div class="carousel">
+            <div class="slide fade">
+                <img src="assets/seattle.jpg" alt="Kerry Park. Seattle WA">
+            </div>
+            <div class="slide fade">
+                <img src="assets/oregon.jpg" alt="Ecola State Park, Oregon">
+            </div>
+            <div class="slide fade">
+                <img src="assets/block.jpg" alt="Block Island, Rhode Island">
+            </div>
+            <div id="prev">&#10094;</div>
+            <div id="next">&#10095;</div>
+        </div>
+        <br>
+        <div id="dotbuttons">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+        <video width="720" height="480" controls>
+            <source src="assets/nj.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p>hiking in new jersey</p>
+
+        <h3>find more pictures on my social media:</h3>
+        <div id="social">
+            <a target="_blank" rel="noopener noreferrer" href="">
+                <i class="fab fa-facebook-square fa-4x"></i>
+            </a>
+            <a target="_blank" rel="noopener noreferrer" href="">
+                <i class="fab fa-instagram fa-4x"></i>
+            </a>
+            <a target="_blank" rel="noopener noreferrer" href="">
+                <i class="fab fa-twitter fa-4x"></i>
+            </a>
+        </div>
+    </section>
+    <div id="footer">
+        <p>Coded for MP1 of CS498RK by Caleb Chow, 2021</p>
+    </div>
+</body>
+
 </html>
