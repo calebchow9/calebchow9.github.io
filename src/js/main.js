@@ -22,7 +22,7 @@ function menu_scroll() {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.offsetHeight;
         // if we are at the top of a section
-        if (scrollY >= (sectionTop - sectionHeight/2)) {
+        if (scrollY >= (sectionTop - sectionHeight / 2)) {
             current = section.getAttribute('id');
         }
     })
@@ -100,6 +100,21 @@ for (var idx = 0; idx < images.length; idx++) {
 var span = document.getElementsByClassName("close")[0];
 span.onclick = function () {
     modal.style.display = "none";
+}
+
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+            content.style.display = "none";
+        } else {
+            content.style.display = "block";
+        }
+    });
 }
 
 // add event listeners for scrolling and buttons

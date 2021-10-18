@@ -6,6 +6,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <script src="js/main.js"></script>
@@ -17,6 +18,7 @@
         <nav id="nav">
             <ul>
                 <li class="home active"><a href="#home">home</a></li>
+                <li class="projects"><a href="#projects">projects</a></li>
                 <li class="connect"><a href="#connect">connect</a></li>
                 <li class="travel"><a href="#travel">travel</a></li>
             </ul>
@@ -26,6 +28,92 @@
             <h1><span class="hello">hello!</span> i'm <span class="name">caleb</span>.</h1>
             <h3>welcome to my website.</h3>
         </div>
+    </section>
+    <section id="projects">
+        <h1>> projects</h1>
+        <h3>Personal projects I've been working on over the past few years! View deployed websites, source code,
+            descriptions and screenshots below.</h3>
+        <div id="projectdiv">
+            <button type="button" class="collapsible">
+                <a class="icon_small" target="_blank" rel="noopener noreferrer"
+                    href="https://github.com/calebchow9/uiuc-toilet_android">
+                    <i class="fab fa-github"></i>
+                </a>
+                <span style="font-weight: bold;">UIUC Toilet App</span> - find the closest bathroom with ease
+            </button>
+            <div class="content">
+                <h4>Tech Stack</h4>
+                <ul>
+                    <li><i class="devicon-android-plain colored"></i> Java (Android Studio)</li>
+                    <li><i class="devicon-mongodb-plain colored"></i> MongoDB</li>
+                </ul>
+                <h4>Description</h4>
+                <p>A simple app that uses Google Maps SDK to display markers for the closest bathroom relative to user's
+                    current location, updating. Includes options to customize nearby bathroom list by favoriting/hiding,
+                    as well as adding rating and comments for each bathroom.</p>
+                <h4>Screenshots</h4>
+                <div class="screenshot_row">
+                    <img src="assets/maps.png" style="max-height: 60%; width: auto;" alt="Maps example" />
+                    <img src="assets/ratings.png" alt="Ratings example" />
+                    <img src="assets/list.png" alt="List example" />
+                </div>
+            </div>
+
+            <button type="button" class="collapsible">
+                <a class="icon_small" target="_blank" rel="noopener noreferrer"
+                    href="https://github.com/calebchow9/uiuc-toilet_android">
+                    <i class="fab fa-github"></i>
+                </a>
+                <span style="font-weight: bold;">NCHG OS</span> - x86 Linux-like operating system
+            </button>
+            <div class="content">
+                <h4>Tech Stack</h4>
+                <ul>
+                    <li>x86 Assembly</li>
+                    <li><i class="devicon-c-plain colored"></i> C</li>
+                </ul>
+                <h4>Description</h4>
+                <p>x86 based operating system that emulates Linux kernel functionality. Please contact me via email if
+                    you would like to see the source code!</p>
+                <p>Coded for MP3 of ECE 391 - Computer Systems Engineering with 3 other team members.</p>
+                <p>Supports:
+                <ul>
+                    <li>read-only filesystem</li>
+                    <li>multiple terminals</li>
+                    <li>memory paging</li>
+                    <li>interrupt/exception handling</li>
+                    <li>keyboad inputs to emulate Linux system calls</li>
+                </ul>
+                </p>
+                <h4>Screenshots</h4>
+                <div class="screenshot_row">
+                </div>
+            </div>
+
+            <button type="button" class="collapsible">
+                <a class="icon_small" target="_blank" rel="noopener noreferrer"
+                    href="https://github.com/calebchow9/uiuc-toilet_android">
+                    <i class="fab fa-github"></i>
+                </a>
+                <span style="font-weight: bold;">Pokédex App</span> - National Pokédex for generations I-VI
+            </button>
+            <div class="content">
+                <h4>Tech Stack</h4>
+                <ul>
+                    <li><i class="devicon-react-original colored"></i> React</li>
+                    <li><i class="devicon-javascript-plain colored"></i> Javascript</li>
+                </ul>
+                <h4>Description</h4>
+                <p>React frontend app that pulls from the PokeAPI to render pokemon cards for generations I-VI. Clicking
+                    on a pokemon shows detailed information about stats, abilities, items, and encounter locations.
+                    Supports sorting pokemon by ID and name. </p>
+                <p>Coded for MP2 of CS498RK by me.</p>
+                <h4>Screenshots</h4>
+                <div class="screenshot_row">
+                </div>
+            </div>
+        </div>
+
     </section>
     <section id="connect">
         <h1>> connect</h1>

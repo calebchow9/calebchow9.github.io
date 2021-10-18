@@ -5,10 +5,12 @@
     --white: #DEE4E7;
     --black: #444444;
     --secondary: #FFC17A;
+    --dark_bg: #18191a;
 }
 
 body {
     margin: 0;
+    background-color: var(--dark_bg);
 }
 
 html {
@@ -114,6 +116,23 @@ span.hello {
     height: 80px;
     background-image: url(../assets/arrow.png);
     background-size: contain;
+}
+
+#projects {
+    font-family: 'Quicksand';
+}
+
+#projects h1 {
+    text-align: left;   
+    font-size: 60px;
+    margin-left: 5rem;
+    color: var(--light);
+}
+
+#projects h3 {
+    text-align: center;   
+    font-size: 20px;
+    color: var(--dark);
 }
 
 #travel {
@@ -348,4 +367,55 @@ span.hello {
 #footer {
     font-family: 'Quicksand';
     text-align: right;
+}
+
+#projectdiv {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.collapsible {
+    min-width: 100%;
+    background-color: var(--white);
+    color: var(--dark);
+    cursor: pointer;
+    padding: 18px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    font-family: 'Quicksand';
+}
+
+.icon_small {
+    text-decoration: none;
+    color: var(--dark);
+}
+  
+
+.content {
+    min-width: 100%;
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    transition: max-height 0.2s ease-out;
+    font-family: 'Quicksand';
+    font-size: 16px;
+}
+
+.screenshot_row {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
+    margin: auto;
+}
+
+.collapsible:after {
+    content: '\02795';
+    font-size: 13px;
+    color: white;
+    float: right;
+    margin-left: 5px;
 }
