@@ -107,7 +107,23 @@ var span = document.getElementsByClassName("close")[0];
 
 span.onclick = function () {
   modal.style.display = "none";
-}; // add event listeners for scrolling and buttons
+};
+
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function () {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+} // add event listeners for scrolling and buttons
 
 
 window.addEventListener('scroll', function () {
